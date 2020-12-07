@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+.virtual_documents
+.pytest_cache
+.vscode
+viz_alchemy.egg-info
+build
+dist
+__pycache__

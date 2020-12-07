@@ -1,0 +1,12 @@
+digraph {
+graph [pad="0.5", nodesep="0.5", ranksep="2"];
+node [shape=plaintext];
+layout=fdp;
+splines=polyline;
+rankdir=LR;
+shop [label=<<table border="0" cellborder="1" cellspacing="0"><tr><td BGCOLOR="lightgray" colspan="2">shop</td></tr><tr><td BGCOLOR="lightgray">Column</td><td BGCOLOR="lightgray">Type</td></tr><tr><td port="shop_id">shop_id</td><td>INTEGER</td></tr><tr><td port="name">name</td><td>VARCHAR</td></tr></table>>];
+owener [label=<<table border="0" cellborder="1" cellspacing="0"><tr><td BGCOLOR="lightgray" colspan="2">owener</td></tr><tr><td BGCOLOR="lightgray">Column</td><td BGCOLOR="lightgray">Type</td></tr><tr><td port="owner_id">owner_id</td><td>INTEGER</td></tr><tr><td port="shop_id">shop_id</td><td>INTEGER</td></tr><tr><td port="age">age</td><td>INTEGER</td></tr></table>>];
+catalog [label=<<table border="0" cellborder="1" cellspacing="0"><tr><td BGCOLOR="lightgray" colspan="2">catalog</td></tr><tr><td BGCOLOR="lightgray">Column</td><td BGCOLOR="lightgray">Type</td></tr><tr><td port="item_id">item_id</td><td>INTEGER</td></tr><tr><td port="name">name</td><td>VARCHAR</td></tr><tr><td port="price">price</td><td>FLOAT</td></tr><tr><td port="description">description</td><td>VARCHAR</td></tr></table>>];
+stock [label=<<table border="0" cellborder="1" cellspacing="0"><tr><td BGCOLOR="lightgray" colspan="2">stock</td></tr><tr><td BGCOLOR="lightgray">Column</td><td BGCOLOR="lightgray">Type</td></tr><tr><td port="stock_id">stock_id</td><td>INTEGER</td></tr><tr><td port="shop_id">shop_id</td><td>INTEGER</td></tr><tr><td port="item_id">item_id</td><td>INTEGER</td></tr><tr><td port="remain_item">remain_item</td><td>INTEGER</td></tr><tr><td port="max_item">max_item</td><td>INTEGER</td></tr></table>>];owener:shop_id->shop:shop_id;
+stock:shop_id->shop:shop_id;
+stock:item_id->catalog:item_id;}
